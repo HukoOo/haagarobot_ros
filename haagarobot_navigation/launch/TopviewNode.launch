@@ -1,0 +1,19 @@
+<!--
+  Example launch file for octomap_server mapping:
+  Listens to incoming PointCloud2 data and incrementally builds an octomap.
+  The data is sent out in different representations.
+
+  Copy this file into your workspace and adjust as needed, see
+  www.ros.org/wiki/octomap_server for details
+-->
+<launch>
+	<node pkg="haagarobot_navigation" type="TopviewNode" name="">
+
+		<!-- path to xml param folder -->
+		<param name="xml_path" type="string" value="$(find haagarobot_navigation)/param" />
+		
+		<!-- Camera ports -->
+		<param name="cam_R_port" type="int" value="2" />
+		<param name="cam_L_port" type="int" value="1" />
+	</node>
+</launch>
