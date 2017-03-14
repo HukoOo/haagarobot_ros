@@ -13,3 +13,4 @@ catkin/
 catkin_generated/
 devel/
 cmake/
+.gitignore~
