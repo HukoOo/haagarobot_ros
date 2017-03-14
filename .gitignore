@@ -14,3 +14,4 @@ catkin_generated/
 devel/
 cmake/
 .gitignore~
+CMakeLists.txt
