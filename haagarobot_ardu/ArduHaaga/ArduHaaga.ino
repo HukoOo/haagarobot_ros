@@ -2,8 +2,8 @@
 #include <SoftwareSerial.h>
 #include <Wire.h>
 
-#include <TinyGPS.h>	//GPS
-#include <GY_85.h>		//IMU
+#include <TinyGPS.h>	//GPS http://arduiniana.org/libraries/tinygps/
+#include <GY_85.h>		//IMU https://github.com/sqrtmo/GY-85-arduino
 
 // ROS
 #include <ros.h>
@@ -268,6 +268,7 @@ void setup()
   nh.subscribe(cmdRPMSub);
   broadcaster.init(nh);
 }
+
 // LPF filter setup
 float LPFVAR = 0.08;
 float lpFilter(float value, float prev_value, float beta)
@@ -293,6 +294,7 @@ float kalmanFilter(float value)
 }
 int term = 0;
 
+/////////////////////////////  Loop  /////////////////////////////////////
 void loop()
 {
   //checkEvent();
